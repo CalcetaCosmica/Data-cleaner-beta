@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css ">
+
+    <style>
+        .logo-1 {
+            width: 150px; /* Cambia el tamaño de la imagen */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="menu container">
+                <img class="logo-1" src="picture/OPRT_BIG.D-9a5b4bf7.png" alt="">
+                <input type="checkbox" id="munu"/>
+                <label for="munu">
+                </label>
+            </div>
+            <meta charset="UTF-8">
+ <title>Secciones con Botones</title>
+ <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      color: #212529;
+    }
+    .tuclase {
+      text-align: center;
+      font-family: "Arial Black", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+        0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25),
+        0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      background-color: #343a40;
+      padding: 10px;
+    }
+    .button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #25384d;
+      background-color: #314e6e;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #172d44;
+    }
+    .content-section {
+      padding: 20px;
+      display: none;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+ </style>
+ <script>
+    function showSection(section) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(s => s.style.display = 'none');
+
+      const selectedSection = document.getElementById(section);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+    }
+
+    // Ejecuta la función drawBackground al cargar la página y cada vez que se cambia el tamaño de la ventana
+    window.addEventListener('load', drawBackground);
+    window.addEventListener('resize', drawBackground);
+ </script>
+</head>
+<body>
+ <div class="button-container">
+
+<!-- (TITULOS) -->
+<!-- (TITULOS) -->
+<!-- (TITULOS) -->
+<!-- (TITULOS) -->
+    <div class="button" onclick="showSection('section1')">Shortcuts</div>
+
+    <div class="button" onclick="showSection('section2')">Data Cleanser</div>
+ </div>
+
+ <canvas></canvas>
+
+ <div id="section1" class="content-section">
+<!-- (Inicio de skiptracing notes) -->
+<!-- (Inicio de skiptracing notes) -->
+<!-- (Inicio de skiptracing notes) -->
+<!-- (Inicio de skiptracing notes) -->
+  <meta charset="UTF-8">
+  <title>Skip</title>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      color: #fff;
+    }
+    .option {
+      display: block;
+      margin-bottom: 10px;
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .option:hover {
+      background-color: #b0f2c2; /* Cambia el color al poner el cursor sobre el botón */  
+    
+    }
+  </style>
+  <script>
+    function copyToClipboard(text) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+      const selected =
+        document.getSelection().rangeCount > 0
+          ? document.getSelection().getRangeAt(0)
+          : false;
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      if (selected) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(selected);
+      }
+      alert('Texto copiado al portapapeles:\n' + text);
+      changeColor(event.target);
+    }
+    function changeColor(element) {
+    element.style.backgroundColor = '#77dd77'; // Cambia el color de fondo a verde
+    setTimeout(() => {
+      element.style.backgroundColor = '#fff'; // Vuelve al color original después de un breve tiempo
+    }, 500);
+  }
+  </script>
+</head>
+<body>
+  <h1 class="tuclase">Team Leader Notes</h1>
+
+  <h2>Mailing lists</h2>
+  <p>
+    <a class="option" href="#" onclick="copyToClipboard('Skip:\nPosible Contacto de cliente proporcionado por proveedor externo (Uno mismo)')">Skip Tracing</a>
+  </p>
+
+  <h2>Notices</h2>
+  <p>
+    <a class="option" href="#" onclick="copyToClipboard('¡Buenos días equipo! Espero que estén listos para un día lleno de logros. Estoy 100% seguro de que hoy será un día increíble. ¡Vamos a hacerlo! 🚀🚀🚀')">Greeting</a>
+    <a class="option" href="#" onclick="copyToClipboard('¡Hasta luego equipo!  Ha sido genial trabajar juntos hoy.')">Farewell</a>
+  </p>
+
+
+   
+ </div>
+ <!-- (Fin de skiptracing notes) -->
+ <!-- (Fin de skiptracing notes) -->
+ <!-- (Fin de skiptracing notes) -->
+ <!-- (Fin de skiptracing notes) -->
+ 
+ <div id="section2" class="content-section">
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Remove whitespace in a CSV file</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  </head>
+  <body style="color: white;">
+      <h1>Remove whitespace in a CSV file</h1>
+  
+      <input type="file" id="fileInput" accept=".csv">
+      <button onclick="removeSpaces()">Remove spaces</button>
+  
+      <script>
+          function removeSpaces() {
+              var inputFile = document.getElementById('fileInput').files[0];
+              if (!inputFile) {
+                  alert("Please select a CSV file.");
+                  return;
+              }
+  
+              Papa.parse(inputFile, {
+                  complete: function(results) {
+                      var outputData = '';
+                      var data = results.data;
+                      for (var i = 0; i < data.length; i++) {
+                          var row = data[i];
+                          for (var j = 0; j < row.length; j++) {
+                              // Remove all whitespace from each cell
+                              row[j] = row[j].replace(/\s+/g, '');
+                          }
+                          outputData += row.join(',') + '\n';
+                      }
+  
+                      var blob = new Blob([outputData], {type: 'text/csv'});
+                      var link = document.createElement('a');
+                      link.href = window.URL.createObjectURL(blob);
+                      link.download = 'data_without_spaces.csv';
+                      link.click();
+                  },
+                  error: function(error) {
+                      console.error("Error parsing CSV:", error);
+                      alert("Error parsing CSV.");
+                  }
+              });
+          }
+      </script>
+  </body>
+  </html>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
